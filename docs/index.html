@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>GRFTY Meme Library</title>
+<meta name="description" content="The 100 base meme templates GRIZL's UGC scoring engine matches campaign posts against." />
+<link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <header class="hero">
+    <div class="hero-inner">
+      <p class="eyebrow">GRIZL UGC ENGINE</p>
+      <h1>GRFTY Meme Library</h1>
+      <p class="sub">
+        100 base meme templates. Every post the scoring engine discovers on X gets
+        perceptual-hash matched against this set — a match is what turns a share into points.
+      </p>
+    </div>
+  </header>
+
+  <main>
+    <div class="controls">
+      <input id="search" type="search" placeholder="Search memes…" aria-label="Search memes" />
+      <div class="tier-filters" id="tierFilters" role="group" aria-label="Filter by tier"></div>
+    </div>
+
+    <p class="count" id="count"></p>
+
+    <div class="grid" id="grid"></div>
+
+    <p class="empty" id="empty" hidden>No memes match your filters.</p>
+  </main>
+
+  <footer>
+    <p>
+      Part of <a href="https://github.com/" id="repoLink">grizl-ugc-engine</a> —
+      the open-sourced core of GRIZL's always-on social campaign scoring system.
+    </p>
+  </footer>
+
+  <div class="modal" id="modal" hidden>
+    <div class="modal-backdrop" data-close></div>
+    <div class="modal-card" role="dialog" aria-modal="true">
+      <button class="modal-close" data-close aria-label="Close">×</button>
+      <img id="modalImg" alt="" />
+      <div class="modal-body">
+        <span class="tier-badge" id="modalTier"></span>
+        <h2 id="modalName"></h2>
+        <p id="modalDesc"></p>
+        <p class="power" id="modalPower"></p>
+      </div>
+    </div>
+  </div>
+
+  <script src="app.js"></script>
+</body>
+</html>
